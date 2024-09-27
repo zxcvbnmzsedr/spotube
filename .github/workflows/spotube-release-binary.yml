@@ -91,6 +91,7 @@ jobs:
       - name: Install ${{matrix.platform}} dependencies
         run: |
           flutter pub get
+          echo '${{ secrets.DOTENV_NIGHTLY }}' > .env
           dart cli/cli.dart install-dependencies --platform=${{matrix.platform}}
 
       - name: Sign Apk
