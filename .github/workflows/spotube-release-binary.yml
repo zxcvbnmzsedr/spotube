@@ -116,7 +116,7 @@ jobs:
         run: dart cli/cli.dart build ${{matrix.platform}}
         env:
           CHANNEL: ${{inputs.channel}}
-          DOTENV: ${{secrets.DOTENV_RELEASE}}
+          DOTENV: ${{secrets.DOTENV_NIGHTLY}}
       
       - uses: actions/upload-artifact@v3
         with:
